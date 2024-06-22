@@ -1,0 +1,371 @@
+body {
+  color:#0f0be2
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Establece la altura mínima del cuerpo como 100vh para que ocupe al menos toda la altura de la ventana */
+  margin: 0; 
+  padding: 0;
+  font-family: 'Press Start 2P';
+  background: url("imagenes/Img/Fondo nintendo.jpg") no-repeat center center/ cover fixed;
+ }
+
+.contenedorHeader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0bb7e2;
+  padding: 1vh;
+ } 
+
+.h1Header, .h1Footer{
+  color:#0b9ee2
+  margin-left: 1vw;
+  
+}
+
+/* MAIN */
+main {
+  flex-grow: 1; /* Permite que el elemento principal crezca para ocupar el espacio restante en el cuerpo */
+  display: flex;
+  
+}
+
+
+.productos {
+  color: #ff002b;
+  display: flex;
+  flex: 0.60; /* Hace que esta sección ocupe la mitad del espacio disponible en el contenedor principal */
+  padding: 5vh;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-evenly;
+    flex-direction: column;
+  
+
+}
+
+/* Estilos para la barra de desplazamiento */
+.contenedorScroll {
+  overflow-y: auto; /* Agrega scroll vertical */
+  max-height: 90vh; /* Altura máxima del contenedor para mostrar el scroll */
+  
+}
+
+.contenedorScroll::-webkit-scrollbar {
+  width: 1vw; /* Ancho de la barra de desplazamiento */
+  
+}
+.contenedorScroll::-webkit-scrollbar-track {
+  background: #000; /* Color de fondo de la barra de desplazamiento */
+  border-radius: 2vw;
+  
+  
+}
+
+.contenedorScroll::-webkit-scrollbar-thumb {
+  background: #ff002b; /* Color del "thumb" de la barra de desplazamiento */
+  border-radius: 2vw; /* Bordes redondeados del "thumb" */
+  
+
+.contenedorScroll::-webkit-scrollbar-thumb:hover {
+  background: #eff30b; /* Cambia el color del "thumb" al pasar el ratón */
+  
+}
+}
+
+/* Estilos para las cards */
+.contenedorCards {
+  color:#ff002b
+  width: 100%;
+  height: fit-content;
+  max-width: 200px;
+  border-radius: 5px;
+  background-color: var(--white-100);
+  box-shadow: -4px 10px 20px -10px var(--black-30);
+  transition: all ease-in 0.1s;
+}
+
+.card {
+  color:#ff002b
+  flex: 0 0 calc (20% - 2vw); /* Calcula el ancho de cada card para que haya tres en una fila */
+  margin: 1vw; /* Espacio entre las cards */
+  border-radius: 1vw; 
+  overflow: hidden; /* Para ocultar cualquier contenido que exceda las dimensiones de la card */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  height: 40vh; /* Altura fija para todas las tarjetas */
+  border: 0.5vh solid #9e0be2; 
+  }
+
+.imagenesCards {
+  color:#ff002b
+  height: 150px;
+  width: 93%;
+  max-width: 200px;
+  border-radius: 5px 5px 0px 0px;
+  margin: 5px 5px 0px 5px;
+  box-sizing: border-box;
+}
+  
+}
+
+.cardContenedorInfo {
+  color:#ff002b
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+  padding: 4vh; /* Espaciado interno */
+  
+
+}
+
+.nombreCard {
+  font-size: 2vh; 
+  color: #ff002b; 
+}
+
+.contenedorValue {
+  display: flex;
+  gap: 1vw;
+  font-size: 2vh; 
+  color:#ff002b; 
+}
+
+.precioCard {
+  font-weight: bold; 
+  font-size: 2vh;
+}
+
+.iconoBasura {
+  width: 1vw; 
+  height: 2vh; /* Mantiene la proporción de aspecto */
+  cursor: pointer; 
+  transition: color 0.3s ease; /* Transición suave del color al pasar el ratón */
+  background-color:#ff002b;
+}
+
+
+/* SECCIÓN FORMULARIO */
+.seccionForm {
+  display: flex;
+  flex: 0.40; /* Hace que esta sección ocupe la otra parte del espacio disponible en el contenedor principal */
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh;
+  color:#ff002b;
+}
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh; /* Aumenta el espacio entre los elementos */
+}
+
+.inputs {
+  width: 20vw;
+  height: 4vh;
+  padding: 1vh; 
+  border: 0.4vh solid #ff002b; 
+  border-radius: 1vw;
+  font-size: 2vh; 
+  font-weight: bold;
+}
+
+.mensajeError {
+  color: #ff002b; /* Color rojo para los mensajes de error */
+  font-size: 1.5vh; /* Tamaño de fuente más pequeño para los mensajes de error */
+  font-weight: bold;
+}
+
+.contenedorBotones{
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  margin-top: 1vh;
+}
+
+.btnEnviar {
+  width: 10vw;
+  height: 6vh;
+  background-color: #ff002b; /* Color de fondo verde */
+  color: #000; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 2vh; /* Bordes redondeados */
+  font-size: 2.5vh; /* Tamaño de fuente */
+  font-weight: bold;
+  cursor: pointer; /* Cursor de puntero al pasar sobre el botón */
+}
+
+.btnEnviar:hover {
+  background-color: #7f7f7f; 
+  color: #ff002b; 
+}
+
+.btnLimpiar {
+  width: 10vw;
+  height: 6vh;
+  background-color: #000; /* Color de fondo rojo */
+  color:#ff002b; /* Texto blanco */
+  border: 0.1vw solid #ff002b; /* Sin borde */
+  border-radius: 2vh; /* Bordes redondeados */
+  font-size: 2.5vh; /* Tamaño de fuente */
+  font-weight: bold;
+  cursor: pointer; /* Cursor de puntero al pasar sobre el botón */
+}
+
+.btnLimpiar:hover {
+  background-color: #4b4b4b; 
+  color:#ff002b; 
+}
+
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #ff002b;
+  padding: 12vh;
+}
+
+.contenedorFooter {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.copyRight{
+  font-size: 2vh;
+  margin-top: 0;
+}
+
+
+/* MEDIA QUERYS*/
+
+@media (max-width: 1200px){
+  .card {
+    flex: 0 0 calc(45% - 1vw); /* Calcula el ancho de cada card para que haya tres en una fila */
+  }
+
+  .iconoBasura{
+    width: 2vw; 
+  }
+
+  .contenedorValue{
+    gap: 2vw;
+  }
+
+  .h1Formulario{
+    text-align: center;
+  }
+
+  .productos, .formulario{
+    padding: 0;
+  }
+
+  .inputs {
+    width: 30vw;
+  }
+
+  .btnEnviar, .btnLimpiar{
+    width: 15vw;
+  }
+}
+
+/* Estilos para dispositivos móviles con una anchura máxima de 767px */
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 0 0 calc(45% - 1vw); /* Calcula el ancho de cada card para que haya tres en una fila */
+  }
+
+  .iconoBasura{
+    width: 2vw;
+  }
+
+  .inputs {
+    width: 100%;
+  }
+
+  .btnEnviar, .btnLimpiar{
+    width: 20vw;
+    margin: 1vw;
+  }
+}
+
+/* Estilos para dispositivos móviles con una anchura máxima de 480px (como algunos teléfonos antiguos) */
+@media (max-width: 500px) {
+  .icon{ 
+    width: 10%;
+  }
+
+  .h1Header, .h1Footer, .h1Productos {
+    font-size: 3vh;
+  }
+
+  /* CARD */
+  .card {
+    flex: 0 0 calc(70% - 1vw); /* Calcula el ancho de cada card para que haya tres en una fila */
+  }
+
+  .precioCard, .nombreCard{
+    font-size: 2vh;
+  }
+
+  .iconoBasura{
+    margin-left: 3vw;
+    width: 4vw;
+  }
+
+  /* FORM */
+  .h1Formulario{
+    text-align: center;
+    font-size: 3vh;
+  }
+
+  .btnEnviar, .btnLimpiar{
+    width: 30vw;
+  }
+
+  .contenedorFooter{
+    justify-content: center;
+  }
+}
+  
+
+
+@media (max-width: 320px) {
+  .card {
+    flex: 0 0 calc(80% - 1vw); /* Calcula el ancho de cada card para que haya tres en una fila */
+  }
+
+  .iconoBasura{
+    width: 6vw;
+  }
+
+  .btnEnviar, .btnLimpiar {
+    width: 30vw;
+  }
+  
+  .h1Header, .h1Footer, .h1Productos, .h1Formulario {
+    font-size: 2.5vh;
+    color: #ff002b; 
+  }
+
+  .copyRight{
+    margin: 0;
+    font-size: 1.6vh;
+    color: #ff002b;
+  }
+
+} 
